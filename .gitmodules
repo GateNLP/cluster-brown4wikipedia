@@ -1,0 +1,6 @@
+[submodule "wikiextractor"]
+	path = wikiextractor
+	url = https://github.com/attardi/wikiextractor.git
+[submodule "generalised-brown"]
+	path = generalised-brown
+	url = https://github.com/sean-chester/generalised-brown.git
