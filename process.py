@@ -1,8 +1,19 @@
 from __future__ import print_function
 import sys
 from nltk.tokenize.moses import MosesTokenizer
+from nltk.tokenize.treebank import TreebankWordTokenizer
 
-tokenizer = MosesTokenizer()
+# The MosesTokenizer converts e.g. ampersands to &amp;, and other symbols to HMLT tags
+# tokenizer = MosesTokenizer()
+
+# we use the TreebankWordTokenizer instead but that one follows the Penn way of converting
+# quotes to `` or '' or parentheses to things like -LRB- 
+# We change the regexps to avoid this:
+tokenizer = TreebankWordTokenizer()
+tokenizer.CONVERT_PARENTHESES = []
+tokenizer.ENDING_QUOTES = []
+tokenizer.STARTING_QUOTES=[]
+
 ## replace a line which only contains </doc> with <SEP_DOC/>
 ## remove a line which starts with "<doc"
 ## replace empty lines with "<SEP_SENT/>"
@@ -25,6 +36,6 @@ for line in sys.stdin:
         pass
     else:
         ## do some additional tokenisation 
-        line = tokenizer.tokenize(line,return_str=True)
-        print(line,sep='',end='')
+        line = tokenizer.tokenize(text=line,return_str=True)
+        print(line.lower(),sep='',end='')
         hadsep = False

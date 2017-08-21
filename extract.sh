@@ -17,9 +17,6 @@ echo saving output to file $outfile
 ## TODO: add a script to clean other HTML we do not want
 python3 ./wikiextractor/WikiExtractor.py --no-templates -o - --min_text_length 100 --filter_disambig_pages $infile | \
   python3 process.py | \
-  python3 lower.py | \
-  sed -e 's/<\/doc>/<EOS\/>/g' | \
-  grep -v  -E '<doc' | grep -v -E '</doc' | \
   sed -e "s/<br>/\n/g" | 
   cat > ${outfile}
 echo file $outfile created
