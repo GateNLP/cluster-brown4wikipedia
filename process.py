@@ -36,6 +36,6 @@ for line in sys.stdin:
         pass
     else:
         ## do some additional tokenisation 
-        line = tokenizer.tokenize(text=line,return_str=True)
+        line = " ".join(tokenizer.tokenize(text=line))
         print(line.lower(),sep='',end='')
         hadsep = False
