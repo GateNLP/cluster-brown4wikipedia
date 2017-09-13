@@ -22,13 +22,12 @@ Statistics for dump files (nr.docs is the last count shown by the INFO line
 of the extraction script, nr.tokens is the number of words on the output 
 returned by `wc -w`), extract is the time needed to extract the dump on derwent:
 
-|language|size(M)| nr.docs | extracted |  nr. tokens | extract |
-----------------------------
-| bg     | 00278 | 00666258 | 0232582 | 0049010508 |0:04:59 | 
-| cs     | 00623 | 01314984 | 0386612 | 0094447512 |0:10:07 |
-| de     | 04300 | 09995327 | 2086671 | 0668221382 |1:16:06 | 
-| en     | 14000 | 54723812 | 5328951 | 1903609328 |2:07:01 |
----------------------
+| language | size(M) | nr.docs | extracted |  nr. tokens | extract |
+-----------------------------------------------------------------
+| bg     | 00278 | 00666258 | 0232582 | 0049010508 | 0:04:59 | 
+| cs     | 00623 | 01314984 | 0386612 | 0094447512 | 0:10:07 |
+| de     | 04300 | 09995327 | 2086671 | 0668221382 | 1:16:06 | 
+| en     | 14000 | 54723812 | 5328951 | 1903609328 | 2:07:01 |
 
 
 On a sharc worker node, with both source and target on /scratch, the
@@ -44,5 +43,4 @@ Elapsed time for creating the merges (24 threads on derwent)
 | cs | 29:37:18 | derwent | 24 |  | 
 | de | | derwent | 24 | | 
 | en | 143:41:33 | gateservice8 | 30 | niced | 
---------------
 
