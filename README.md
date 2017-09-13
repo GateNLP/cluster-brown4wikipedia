@@ -34,3 +34,15 @@ returned by `wc -w`), extract is the time needed to extract the dump on derwent:
 On a sharc worker node, with both source and target on /scratch, the
 time to extract bg was 15:40 so almost 4 times as slow!
 
+
+Elapsed time for creating the merges (24 threads on derwent)
+(command `time ./generalised-brown/merge_generator/wcluster --threads 24 --a 1000 --text XXwiki-latest-pages-articles.txt`) 
+
+| language | time | server | threads | notes | 
+--------------------------------------------------
+| bg | 14:31:43 | derwent | 24 |  | 
+| cs | 29:37:18 | derwent | 24 |  | 
+| de | | derwent | 24 | | 
+| en | 143:41:33 | gateservice8 | 30 | niced | 
+--------------
+
