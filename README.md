@@ -39,8 +39,22 @@ Elapsed time for creating the merges (24 threads on derwent)
 
 | language | time | server | threads | notes | 
 --------------------------------------------------
-| bg | 14:31:43 | derwent | 24 |  | 
-| cs | 29:37:18 | derwent | 24 |  | 
-| de | | derwent | 24 | | 
+| bg | 014:31:43 | derwent | 24 |  | 
+| cs | 029:37:18 | derwent | 24 |  | 
+| de | 128:10:46 | derwent | 24 |  | 
 | en | 143:41:33 | gateservice8 | 30 | niced | 
 
+The merges for English were created on gs8 and the result copied over to derwent.
+
+Elapsed times for creating the actual clusters:
+
+(`time python3 ./generalised-brown/cluster_generator/cluster.py -in DUMPFILE-c1000-p1.out/merges -c 100 > LANGwiki-a1000-c100.tsv`)
+
+| language | time | server | notes |
+--------------------------------------
+| bg | 0:08 | derwent | 01582126 entries |
+| cs | 0:17 | derwent | 02859345 entries | 
+| de | 1:26 | derwent | 12935787 entries | 
+| en | 1:33 | derwent | 14205136 entries | 
+
+Copied to derwent:/export/raid/johann/data/brown/wp
