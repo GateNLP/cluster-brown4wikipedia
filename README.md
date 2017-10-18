@@ -52,7 +52,7 @@ Elapsed times for creating the actual clusters:
 (`time python3 ./generalised-brown/cluster_generator/cluster.py -in DUMPFILE-c1000-p1.out/merges -c 100 > LANGwiki-a1000-c100.tsv`)
 
 | language | time | server | notes |
-|------------------------------------|
+|----------|------|--------|---------|
 | bg | 0:08 | derwent | 01582126 entries |
 | cs | 0:17 | derwent | 02859345 entries | 
 | de | 1:26 | derwent | 12935787 entries | 
