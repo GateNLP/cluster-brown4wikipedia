@@ -23,7 +23,7 @@ of the extraction script, nr.tokens is the number of words on the output
 returned by `wc -w`), extract is the time needed to extract the dump on derwent:
 
 | language | size(M) | nr.docs | extracted |  nr. tokens | extract |
-|-----------------------------------------------------------------|
+|----------|---------|---------|-----------|-------------|--------|
 | bg     | 00278 | 00666258 | 0232582 | 0049010508 | 0:04:59 |
 | cs     | 00623 | 01314984 | 0386612 | 0094447512 | 0:10:07 |
 | de     | 04300 | 09995327 | 2086671 | 0668221382 | 1:16:06 |
@@ -39,7 +39,7 @@ Elapsed time for creating the merges (24 threads on derwent)
 (command `time ./generalised-brown/merge_generator/wcluster --threads 24 --a 1000 --text XXwiki-latest-pages-articles.txt`) 
 
 | language | time | server | threads | notes | 
---------------------------------------------------
+|----------|------|--------|---------|-----------|
 | bg | 014:31:43 | derwent | 24 |  | 
 | cs | 029:37:18 | derwent | 24 |  | 
 | de | 128:10:46 | derwent | 24 |  | 
@@ -52,7 +52,7 @@ Elapsed times for creating the actual clusters:
 (`time python3 ./generalised-brown/cluster_generator/cluster.py -in DUMPFILE-c1000-p1.out/merges -c 100 > LANGwiki-a1000-c100.tsv`)
 
 | language | time | server | notes |
---------------------------------------
+|------------------------------------|
 | bg | 0:08 | derwent | 01582126 entries |
 | cs | 0:17 | derwent | 02859345 entries | 
 | de | 1:26 | derwent | 12935787 entries | 
